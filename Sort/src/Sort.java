@@ -3,8 +3,10 @@ public class Sort {
         int[] array = {25,16,-10,10,5, 50, 10,-60};
 
 //        array = bubbleSort(array);
-//        array = selectionSort(array);
-        array = shellSort(array);
+//        array = insertionSort(array);
+        array = selectionSort(array);
+//        array = shellSort(array);
+//        array = reverse(array);
         for (int i = 0; i < array.length; i++){
             System.out.print(array[i]+", ");
         }
@@ -47,13 +49,31 @@ public class Sort {
         }
     }
 
+    public static int[] selectionSort(int[] arr){
+        int maxIndex;
+        int currentIndex = 0 ;
+
+        for(int i = arr.length ; i > 0 ; i-- ){
+            maxIndex = 0;
+            for (int j = 0; j < i ; j++) {
+                currentIndex = j;
+                if(arr[maxIndex] < arr[currentIndex]){
+                    maxIndex = currentIndex;
+                }
+
+            }
+            swap(arr, currentIndex, maxIndex);
+        }
+        return arr;
+    }
+
     /**
      * Selection sort
      * stable, in-place, quadratic
      * @param arr : array
      * @return : sorted array from min to max
      */
-    public static int[] selectionSort(int[] arr){
+    public static int[] insertionSort(int[] arr){
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j >0 ; j--) {
                 if(arr[j-1]>arr[j]){
@@ -90,5 +110,12 @@ public class Sort {
         arr[i] = arr[j];
         arr[j] = temp;
 
+    }
+
+    public static int[] reverse(int[] arr){
+        for(int i = 0 ; i<arr.length && arr.length-1-i>1 ;i++){
+            swap(arr,i, arr.length-1-i);
+        }
+        return arr;
     }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Data-stracture-and-algorithm-deep-dive-Java.iml" filepath="$PROJECT_DIR$/Data-stracture-and-algorithm-deep-dive-Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data_Structure_Algorithm.iml" filepath="$PROJECT_DIR$/Data_Structure_Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Heap/Heap.iml" filepath="$PROJECT_DIR$/Heap/Heap.iml" />
       <module fileurl="file://$PROJECT_DIR$/SearchAlgorithm/SearchAlgorithm.iml" filepath="$PROJECT_DIR$/SearchAlgorithm/SearchAlgorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sort/Sort.iml" filepath="$PROJECT_DIR$/Sort/Sort.iml" />
