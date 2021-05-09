@@ -9,7 +9,6 @@ public class Quick extends Sort{
     }
 
     private void quick(int start, int end){
-
         if(end - start < 2){
             return;
         }
@@ -19,24 +18,26 @@ public class Quick extends Sort{
         quick(pivotIndex+1, end);
     }
 
-    private int partition(int start, int end){
-        int pivotNum = array[start];
+    private int partition(int start, int end ){
         int i = start;
         int j = end;
+        int pivotValue = array[start];
 
-        while(i <j){
+        while(i<j){
 
-            while(i<j && array[--j]>= pivotNum);
+            while(i < j && pivotValue <= array[--j]);
+
             if(i<j){
                 array[i] = array[j];
             }
 
-            while(i<j && array[++i]<= pivotNum);
+            while(i<j && array[++i] <= pivotValue );
+
             if(i<j){
                 array[j] = array[i];
             }
         }
-        array[j] = pivotNum;
+        array[j] = pivotValue;
         return j;
     }
 }

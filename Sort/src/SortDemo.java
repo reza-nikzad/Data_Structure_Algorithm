@@ -38,5 +38,9 @@ public class SortDemo {
         Sort c = new Counting(arr,1,10 );
         c.sort();
         System.out.println("Counting sort: "+c.toString());
+
+        b= new RecursiveInsertion(a);
+        b.sort();
+        System.out.println("Insertion sort (Challenge recursive): "+b.toString());
     }
 }
