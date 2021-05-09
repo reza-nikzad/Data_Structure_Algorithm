@@ -26,6 +26,10 @@ public class SortDemo {
         b.sort();
         System.out.println("Merge sort: "+b.toString());
 
+        b = new DescendingMerge(a);
+        b.sort();
+        System.out.println("Descending Merge sort: "+b.toString());
+
         b= new Quick(a);
         b.sort();
         System.out.println("Quick sort: "+b.toString());
