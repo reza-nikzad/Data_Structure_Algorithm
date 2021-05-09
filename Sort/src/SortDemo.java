@@ -29,5 +29,10 @@ public class SortDemo {
         b= new Quick(a);
         b.sort();
         System.out.println("Quick sort: "+b.toString());
+
+        int[] arr = {2,2,3,4,5,7,8,8,9,10};
+        Sort c = new Counting(arr,1,10 );
+        c.sort();
+        System.out.println("Counting sort: "+c.toString());
     }
 }
