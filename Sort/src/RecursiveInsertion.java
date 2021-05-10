@@ -11,7 +11,7 @@ public class RecursiveInsertion extends Sort{
 
     private void insertion(int end){
 
-        if(end > 0){
+        if(end < 2){
             return;
         }
         insertion(--end);
@@ -23,9 +23,11 @@ public class RecursiveInsertion extends Sort{
             return;
         }
         int temp = array[end];
-        while(temp < array[--end]){
-            array[end+1] = array[end];
+        int i = end;
+        while(i > 0 && temp < array[i-1]){
+            array[i] = array[i-1];
+            i--;
         }
-        array[end] = temp;
+        array[i] = temp;
     }
 }

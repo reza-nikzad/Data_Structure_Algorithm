@@ -2,7 +2,7 @@ public class SortDemo {
     public static void main(String[] args) {
         int[] a = {20, 1, 0, 6, -15, -60, 50, 100};
 
-        Sort b = new Bubble(a);
+        /*Sort b = new Bubble(a);
         b.sort();
         System.out.println("Bubble sort: "+b.toString());
 
@@ -38,9 +38,20 @@ public class SortDemo {
         Sort c = new Counting(arr,1,10 );
         c.sort();
         System.out.println("Counting sort: "+c.toString());
-
-        b= new RecursiveInsertion(a);
+*/
+/*        Sort b= new RecursiveInsertion(a);
         b.sort();
         System.out.println("Insertion sort (Challenge recursive): "+b.toString());
+
+        int[] radixArray = { 4725, 4586, 1330, 8792, 1594, 5729 };
+        Sort s = new Radix(radixArray,10,4);
+        s.sort();
+        System.out.println("Radix: "+s.toString());*/
+
+        String[] radixStrings = { "bcdef", "dbaqc", "abcde", "omadd", "bbbbb" };
+        RadixString rs = new RadixString(radixStrings,5);
+        rs.sort();
+        System.out.println("Radix: "+rs.toString());
+
     }
 }
